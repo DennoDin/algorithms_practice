@@ -24,8 +24,8 @@ let largestSum = (array) => {
   }
 
   for(let i = 2; i < array.length; i++){
-    if(array[i] > secondLargest){
-      if(array[i] > largest){
+    if(array[i] >= secondLargest){
+      if(array[i] >= largest){
         secondLargest = largest;
         largest = array[i];
       } else {
