@@ -3,6 +3,8 @@ Determine the largest length that returns the largest bivalue array.
 A bivalue array is an array made of only two values (i.e. [1,2,2,1] || [3,4,3,4,4,3])
 */
 
+const { assert } = require('chai');
+
 let largestBivalue = (array) => {
   let latest, secondLatest, result, count = 0;    //default: returns -1
   if(array.length < 1){
@@ -32,3 +34,9 @@ let largestBivalue = (array) => {
   }
   return result;                            //returns result
 }
+
+///////////
+// TESTS //
+///////////
+
+assert.equal(largestBivalue([1,2]), 2, 'The function failed! :(');
